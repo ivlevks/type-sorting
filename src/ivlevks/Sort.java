@@ -19,4 +19,17 @@ public class Sort {
         return array;
     }
 
+    public static int[] insertionSort(int[] array) {
+        for (int out = 1; out < array.length; out++) {
+            int temp = array[out];
+            int in = out;
+            while (in > 0 && array[in-1] >= temp) {
+                array[in] = array[in-1];
+                in--;
+            }
+            array[in] = temp;
+        }
+        return array;
+    }
+
 }
