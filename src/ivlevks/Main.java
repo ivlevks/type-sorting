@@ -12,7 +12,7 @@ public class Main {
         System.out.print("Начальный массив: ");
         show(array);
         System.out.print("Сортированный массив: ");
-        show(Sort.selectionSort(array));
+        show(Sort.shellSort(array));
     }
 
     public static void show(int[] array) {

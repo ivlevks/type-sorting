@@ -51,6 +51,26 @@ public class Sort {
         return array;
     }
 
+    // Shell sorting
+    public static int[] shellSort(int[] array) {
+        int step = 1;
+        while (step <= array.length / 3) {
+            step = step * 3 + 1;
+        }
+        while (step >= 1) {
+            for (int i = step; i < array.length; i++) {
+                for (int j = i; j >= step; j = j - step) {
+                    if (array[j] < array[j - step]) {
+                        int temp = array[j];
+                        array[j] = array[j - step];
+                        array[j - step] = temp;
+                    }
+                }
+            }
+            step = step / 3;
+        }
+        return array;
+    }
 }
 
 
